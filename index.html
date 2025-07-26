@@ -4,30 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <title>DEV.PROJECTS</title>
-    <!-- Подключение локального Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
+        html,
         body {
-            padding-top: 50px;
-            height: 100vh;
+            height: 100%;
+            margin: 0;
         }
 
-        .row {
+        body {
             display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
+            flex-direction: column;
         }
 
-        .col-6 {
-            padding-left: 5px;
-            padding-right: 5px;
-            max-width: 250px;
-            flex: 0 0 auto;
-        }
-
-        .gallery-item {
-            position: relative;
-            display: block;
+        main {
+            flex: 1;
+            margin-top: 160px;
+            /* отступ сверху для опускания картинок */
         }
 
         .gallery-img {
@@ -40,6 +35,11 @@
 
         .gallery-img:hover {
             transform: scale(1.03);
+        }
+
+        .gallery-item {
+            position: relative;
+            display: block;
         }
 
         .overlay-text {
@@ -62,79 +62,75 @@
     </style>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">DEV.PROJECTS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="redbull.html">RB Lennupäev</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="robolahing.html">Robolahing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="derby.html">Romurally</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="legoauto.html">Legoauto</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-6">
+    <!-- Навбар -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">DEV.PROJECTS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="redbull.html">RB Lennupäev</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="robolahing.html">Robolahing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="derby.html">Romurally</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legoauto.html">Legoauto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контент -->
+    <main class="container">
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="redbull.html" class="gallery-item">
-                    <img src="img/redbull.png" alt="Картинка 1" class="gallery-img" />
+                    <img src="img/redbull.png" alt="RB Lennupäev" class="gallery-img" />
                     <div class="overlay-text">RB Lennupäev</div>
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="robolahing.html" class="gallery-item">
-                    <img src="img/robolahing.png" alt="Картинка 2" class="gallery-img" />
+                    <img src="img/robolahing.png" alt="Robolahing" class="gallery-img" />
                     <div class="overlay-text">Robolahing</div>
                 </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="derby.html" class="gallery-item">
-                    <img src="img/derby.png" alt="Картинка 3" class="gallery-img" />
+                    <img src="img/derby.png" alt="Romurally" class="gallery-img" />
                     <div class="overlay-text">Romurally</div>
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <a href="legoauto.html" class="gallery-item">
-                    <img src="img/legoauto.png" alt="Картинка 4" class="gallery-img" />
+                    <img src="img/legoauto.png" alt="Legoauto" class="gallery-img" />
                     <div class="overlay-text">Legoauto</div>
                 </a>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Футер -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container-fluid">
             <p class="mb-2">DEV.PROJECTS</p>
             <a href="https://www.instagram.com/devid.melnik" target="_blank"
-                class="text-white me-3 text-decoration-none">
-                связаться в инстаграмме
-            </a>
-            <a href="https://t.me/kesklinn" target="_blank" class="text-white text-decoration-none">
-                связаться в телеграме
-            </a>
+                class="text-white me-3 text-decoration-none">связаться в инстаграмме</a>
+            <a href="https://t.me/kesklinn" target="_blank" class="text-white text-decoration-none">связаться в
+                телеграме</a>
         </div>
     </footer>
 
-    <!-- (по желанию) Подключение Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
