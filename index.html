@@ -7,6 +7,11 @@
     <!-- Подключение локального Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
+        body {
+            padding-top: 50px;
+            height: 100vh;
+        }
+
         .row {
             display: flex;
             justify-content: center;
@@ -16,8 +21,13 @@
         .col-6 {
             padding-left: 5px;
             padding-right: 5px;
-            max-width: 300px;
+            max-width: 250px;
             flex: 0 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            display: block;
         }
 
         .gallery-img {
@@ -31,32 +41,80 @@
         .gallery-img:hover {
             transform: scale(1.03);
         }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            text-shadow: 0 0 5px black;
+        }
+
+        .gallery-item:hover .overlay-text {
+            opacity: 1;
+        }
     </style>
 </head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">DEV.PROJECTS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="redbull.html">RB Lennupäev</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="robolahing.html">Robolahing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="derby.html">Romurally</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="legoauto.html">Legoauto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <body>
     <div class="container mt-5">
         <div class="row">
             <div class="col-6">
-                <a href="redbull.html" target="_blank">
+                <a href="redbull.html" target="_blank" class="gallery-item">
                     <img src="img/redbull.png" alt="Картинка 1" class="gallery-img" />
+                    <div class="overlay-text">RB Lennupäev</div>
                 </a>
             </div>
             <div class="col-6">
-                <a href="robolahing.html" target="_blank">
+                <a href="robolahing.html" target="_blank" class="gallery-item">
                     <img src="img/robolahing.png" alt="Картинка 2" class="gallery-img" />
+                    <div class="overlay-text">Robolahing</div>
                 </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <a href="derby.html" target="_blank">
+                <a href="derby.html" target="_blank" class="gallery-item">
                     <img src="img/derby.png" alt="Картинка 3" class="gallery-img" />
+                    <div class="overlay-text">Romurally</div>
                 </a>
             </div>
             <div class="col-6">
-                <a href="legoauto.html" target="_blank">
+                <a href="legoauto.html" target="_blank" class="gallery-item">
                     <img src="img/legoauto.png" alt="Картинка 4" class="gallery-img" />
+                    <div class="overlay-text">Legoauto</div>
                 </a>
             </div>
         </div>
