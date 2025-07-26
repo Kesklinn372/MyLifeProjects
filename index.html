@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DEV.PROJECTS</title>
+    <!-- Подключение локального Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .col-6 {
+            padding-left: 5px;
+            padding-right: 5px;
+            max-width: 300px;
+            flex: 0 0 auto;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <a href="redbull.html" target="_blank">
+                    <img src="img/redbull.png" alt="Картинка 1" class="gallery-img" />
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="robolahing.html" target="_blank">
+                    <img src="img/robolahing.png" alt="Картинка 2" class="gallery-img" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <a href="derby.html" target="_blank">
+                    <img src="img/derby.png" alt="Картинка 3" class="gallery-img" />
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="legoauto.html" target="_blank">
+                    <img src="img/legoauto.png" alt="Картинка 4" class="gallery-img" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container-fluid">
+            <p class="mb-2">DEV.PROJECTS</p>
+            <a href="https://www.instagram.com/devid.melnik" target="_blank"
+                class="text-white me-3 text-decoration-none">
+                связаться в инстаграмме
+            </a>
+            <a href="https://t.me/kesklinn" target="_blank" class="text-white text-decoration-none">
+                связаться в телеграме
+            </a>
+        </div>
+    </footer>
+
+    <!-- (по желанию) Подключение Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

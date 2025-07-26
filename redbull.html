@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lennupäev</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 0;
+            background: black;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-prev {
+            left: 10px;
+        }
+
+        .nav-next {
+            right: 10px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">DEV.PROJECTS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="redbull.html">RB Lennupäev</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="robolahing.html">Robolahing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="derby.html">Romurally</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legoauto.html">Legoauto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-4">
+        <div class="row g-2">
+
+            <div style="font-size: 2rem; font-weight: bold;">
+                Redbull flugtag 2022 Lennupäev
+            </div>
+
+            <!-- Все картинки и видео -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/playPhoto.png" class="gallery-item" alt="Видео 2" data-type="video" data-bs-toggle="modal"
+                    data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/29r.mp4" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/1r.jpeg" class="gallery-item" alt="Фото 1" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/1r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/2r.jpeg" class="gallery-item" alt="Фото 2" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/2r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/3r.jpeg" class="gallery-item" alt="Фото 3" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/3r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/4r.jpeg" class="gallery-item" alt="Фото 4" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/4r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/5r.jpeg" class="gallery-item" alt="Фото 5" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/5r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/6r.jpeg" class="gallery-item" alt="Фото 6" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/6r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/7r.jpeg" class="gallery-item" alt="Фото 7" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/7r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/8r.jpeg" class="gallery-item" alt="Фото 8" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/8r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/9r.jpeg" class="gallery-item" alt="Фото 9" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/9r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/10r.jpeg" class="gallery-item" alt="Фото 10" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/10r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/11r.jpeg" class="gallery-item" alt="Фото 11" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/11r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/12r.jpeg" class="gallery-item" alt="Фото 12" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/12r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/13r.jpeg" class="gallery-item" alt="Фото 13" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/13r.jpeg" />
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/14r.jpeg" class="gallery-item" alt="Фото 14" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/14r.jpeg" />
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/16r.jpeg" class="gallery-item" alt="Фото 16" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/16r.jpeg" />
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/17r.jpeg" class="gallery-item" alt="Фото 17" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/17r.jpeg" />
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/18r.jpeg" class="gallery-item" alt="Фото 18" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/18r.jpeg" />
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/19r.jpeg" class="gallery-item" alt="Фото 19" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/19r.jpeg" />
+            </div>
+
+
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/21r.jpeg" class="gallery-item" alt="Фото 21" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/21r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/22r.jpeg" class="gallery-item" alt="Фото 22" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/22r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/23r.jpeg" class="gallery-item" alt="Фото 23" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/23r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/24r.jpeg" class="gallery-item" alt="Фото 24" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/24r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/25r.jpeg" class="gallery-item" alt="Фото 25" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/25r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/26r.jpeg" class="gallery-item" alt="Фото 26" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/26r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/redbullflugtag/27r.jpeg" class="gallery-item" alt="Фото 27" data-type="image"
+                    data-bs-toggle="modal" data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/27r.jpeg" />
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <img src="img/playPhoto.png" class="gallery-item" alt="Видео 1" data-type="video" data-bs-toggle="modal"
+                    data-bs-target="#mediaModal" data-bs-src="img/redbullflugtag/28r.mp4" />
+            </div>
+
+
+
+            <div class="text-center my-4">
+                <a href="https://www.instagram.com/rblp2022" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline-dark me-2">
+                    Lennupäev Instagram
+                </a>
+                <a href="https://t.me/s/rblp2022" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline-primary">
+                    Lennupäev Telegram
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="mediaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0 position-relative">
+                    <button type="button" class="nav-btn nav-prev" aria-label="Предыдущее">&lt;</button>
+                    <div id="mediaContainer" class="w-100 text-center" style="background:black;"></div>
+                    <button type="button" class="nav-btn nav-next" aria-label="Следующее">&gt;</button>
+                </div>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                    aria-label="Закрыть"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">DEV.PROJECTS</p>
+            <a href="https://www.instagram.com/devid.melnik" target="_blank"
+                class="text-white me-3 text-decoration-none">связаться в
+                инстаграмме</a>
+            <a href="https://t.me/kesklinn" target="_blank" class="text-white text-decoration-none">связаться в
+                телеграме</a>
+        </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const mediaModal = document.getElementById('mediaModal');
+        const mediaContainer = document.getElementById('mediaContainer');
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        const prevBtn = mediaModal.querySelector('.nav-prev');
+        const nextBtn = mediaModal.querySelector('.nav-next');
+        let currentIndex = 0;
+
+        function showMedia(index) {
+            if (index < 0) index = items.length - 1;
+            if (index >= items.length) index = 0;
+            currentIndex = index;
+
+            mediaContainer.innerHTML = '';
+            const item = items[index];
+            const type = item.getAttribute('data-type');
+            const src = item.getAttribute('data-bs-src');
+
+            if (type === 'image') {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = item.alt || '';
+                img.style.width = '100%';
+                img.style.height = 'auto';
+                mediaContainer.appendChild(img);
+            } else if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = src;
+                video.controls = true;
+                video.autoplay = true;
+                video.style.maxHeight = '80vh';
+                mediaContainer.appendChild(video);
+            }
+        }
+
+        mediaModal.addEventListener('show.bs.modal', event => {
+            const trigger = event.relatedTarget;
+            currentIndex = items.indexOf(trigger);
+            showMedia(currentIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            showMedia(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showMedia(currentIndex + 1);
+        });
+
+        mediaModal.addEventListener('hidden.bs.modal', () => {
+            mediaContainer.innerHTML = '';
+        });
+
+        // Листание стрелками на клавиатуре
+        document.addEventListener('keydown', function (event) {
+            if (!mediaModal.classList.contains('show')) return;
+
+            if (event.key === 'ArrowLeft') {
+                showMedia(currentIndex - 1);
+            } else if (event.key === 'ArrowRight') {
+                showMedia(currentIndex + 1);
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
