@@ -1,16 +1,15 @@
-# Игнорируем исходники CSS
+# build output
+dist/
 css/
 
-# Игнорируем папку с собранными файлами
-dist/
-
-# node_modules (если есть)
+# node
 node_modules/
-
-# Логи npm
 npm-debug.log*
 
-# Временные файлы системы
+# system
 .DS_Store
 Thumbs.db
 
+# optional: IDE/Editor
+.vscode/
+.idea/
