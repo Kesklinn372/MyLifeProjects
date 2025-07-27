@@ -1,0 +1,16 @@
+# Игнорируем исходники CSS
+css/
+
+# Игнорируем папку с собранными файлами
+dist/
+
+# node_modules (если есть)
+node_modules/
+
+# Логи npm
+npm-debug.log*
+
+# Временные файлы системы
+.DS_Store
+Thumbs.db
+
