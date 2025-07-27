@@ -1,0 +1,15 @@
+# build output
+dist/
+css/
+
+# node
+node_modules/
+npm-debug.log*
+
+# system
+.DS_Store
+Thumbs.db
+
+# optional: IDE/Editor
+.vscode/
+.idea/
